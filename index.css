@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat";
+  padding: 0px;
+  margin: 0px;
+  font-size: 1rem;
+}
+:root {
+  --bg: #00a1f1;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#inputFile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid var(--bg);
+  cursor: pointer;
+  width: 20rem;
+}
+
+#inputFile i {
+  color: var(--bg);
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 0.6rem;
+  font-size: 1.5rem;
+}
+#inputFile button {
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 0.5rem 3rem;
+  background-color: var(--bg);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+/* ================================================= */
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.close {
+  display: none;
+}
+.modal-area {
+  /* position: ; */
+}
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  width: 50vw;
+  max-height: 60vh;
+  overflow: auto;
+  background-color: white;
+  position: absolute;
+  border-radius: 0.2rem;
+}
+.modal-body {
+  padding: 0.2rem;
+}
+.image {
+  position: relative;
+  padding: 0.3rem;
+  justify-content: flex-start;
+  border-bottom: 2px solid #eee;
+}
+.image .remove {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  background-color: red;
+  padding: 0.3rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.image img {
+  object-fit: cover;
+  width: 25vw;
+  height: 15vh;
+}
+.image-detail {
+  margin-left: 1rem;
+}
+
+.modal-foot {
+  justify-content: flex-end;
+}
+.modal-foot button {
+  border: none;
+  margin: 0.2rem;
+  padding: 0.2rem 1rem;
+  color: white;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+.modal-button-success {
+  background-color: var(--bg);
+}
+.modal-button-cancel {
+  background-color: red;
+}
