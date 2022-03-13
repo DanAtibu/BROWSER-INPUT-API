@@ -1,0 +1,16 @@
+{
+  "homepage": "http://DanAtibu.github.io/BROWSER-INPUT-API",
+  "name": "inputfile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d ./dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}

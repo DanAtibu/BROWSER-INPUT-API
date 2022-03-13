@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>File Input</title>
+</head>
+<body>
+
+
+    <div id="inputFile">
+        <i class="fas fa-upload"></i>
+        <button>Upload</button>
+    </div>
+    
+    <div id="modal-area">
+
+        <!-- <div class="modal flex" id="jbsd878d7s87d">
+
+            <div class="modal-content">
+                <div class="modal-body">
+                    wqwkjhskdjhk asjbdas jashjash
+                </div>
+                <div class="modal-foot flex">
+                    <button class="modal-button-cancel">CANCEL</button>
+                    <button class="modal-button-success">OK</button>
+                </div>
+            </div>
+
+        </div> -->
+
+    </div>
+
+
+</body>
+<script src="app.js"></script>
+<script>
+    const button = document.querySelector("#inputFile button");
+    const data = document.querySelector("#inputFile .fas");
+    button.onclick = (e) => {
+        e.preventDefault();
+        window.showOpenFilePicker({multiple : true}).then( async files => {
+            const List = [];
+            for (let item of files) {
+                List.push( await item.getFile() );
+            }
+            const content = await HTMLFileContent( List );
+            await my_modal.add( content );
+            await my_modal.open(true);
+        }).catch( error => {
+            console.log( error );
+            alert('Oops, Something Went Wrong !');
+        });
+    }
+
+    data.onclick = e => {
+        e.preventDefault();
+        my_modal.open(true);
+    }
+</script>
+<link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</html>
